@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30309.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PedidosRulote", "PedidosRulote.csproj", "{B316D4E9-B7C6-4200-96DE-428D5B7CF9ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B316D4E9-B7C6-4200-96DE-428D5B7CF9ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B316D4E9-B7C6-4200-96DE-428D5B7CF9ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B316D4E9-B7C6-4200-96DE-428D5B7CF9ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B316D4E9-B7C6-4200-96DE-428D5B7CF9ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CF795C7B-714E-45DB-8832-780BCFBF47CE}
+	EndGlobalSection
+EndGlobal
