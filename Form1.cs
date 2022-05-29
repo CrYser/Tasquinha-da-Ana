@@ -197,37 +197,25 @@ namespace PedidosRulote
         //===============================================================================================================
         private void RBKebab_Checked(object sender, EventArgs e)
         {
-            if (RBKebab.Checked)
-                panelKebab.Visible = true;
-            else
-                panelKebab.Visible = false;
+            panelKebab.Visible = RBKebab.Checked;
         }
 
         //===============================================================================================================
         private void RBBifana_CheckedChanged_1(object sender, EventArgs e)
         {
-            if (RBBifana.Checked)
-                panelBifana.Visible = true;
-            else
-                panelBifana.Visible = false;
+            panelBifana.Visible = RBBifana.Checked;
         }
 
         //===============================================================================================================
         private void RBCachorro_CheckedChanged_1(object sender, EventArgs e)
         {
-            if (RBCachorro.Checked)
-                panelCachorro.Visible = true;
-            else
-                panelCachorro.Visible = false;
+            panelCachorro.Visible = RBCachorro.Checked;
         }
 
         //===============================================================================================================
         private void RBHamburguer_CheckedChanged_1(object sender, EventArgs e)
         {
-            if (RBHamburguer.Checked)
-                panelHamburguer.Visible = true;
-            else
-                panelHamburguer.Visible = false;
+            panelHamburguer.Visible = RBHamburguer.Checked;
         }
         #endregion
 
@@ -259,45 +247,40 @@ namespace PedidosRulote
                 checkedListBox1.SetItemChecked(i, false);
             foreach (Control c in panelItem.Controls)
             {
-                if (c is RadioButton)
+                if (c is RadioButton rb)
                 {
-                    RadioButton rb = (RadioButton)c;
                     rb.Checked = true;
                 }
             }
 
             foreach (Control c in panelKebab.Controls)
             {
-                if (c is RadioButton)
+                if (c is RadioButton rb)
                 {
-                    RadioButton rb = (RadioButton)c;
                     rb.Checked = true;
                 }
             }
 
             foreach (Control c in panelBifana.Controls)
             {
-                if (c is RadioButton)
+                if (c is RadioButton rb)
                 {
-                    RadioButton rb = (RadioButton)c;
                     rb.Checked = true;
                 }
             }
 
             foreach (Control c in panelCachorro.Controls)
             {
-                if (c is RadioButton)
+                if (c is RadioButton rb)
                 {
-                    RadioButton rb = (RadioButton)c;
                     rb.Checked = true;
                 }
             }
 
             foreach (Control c in panelHamburguer.Controls)
             {
-                if (c is RadioButton)
+                if (c is RadioButton rb)
                 {
-                    RadioButton rb = (RadioButton)c;
                     rb.Checked = true;
                 }
             }
