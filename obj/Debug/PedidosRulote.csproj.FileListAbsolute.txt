@@ -1,0 +1,30 @@
+C:\Users\cryse\Desktop\Tasquinha-da-Ana-main\obj\Debug\PedidosRulote.csproj.AssemblyReference.cache
+C:\Users\cryse\Desktop\Tasquinha-da-Ana-main\obj\Debug\PedidosRulote.csproj.SuggestedBindingRedirects.cache
+C:\Users\cryse\Desktop\Tasquinha-da-Ana-main\obj\Debug\PedidosRulote.Form1.resources
+C:\Users\cryse\Desktop\Tasquinha-da-Ana-main\obj\Debug\PedidosRulote.Properties.Resources.resources
+C:\Users\cryse\Desktop\Tasquinha-da-Ana-main\obj\Debug\PedidosRulote.csproj.GenerateResource.cache
+C:\Users\cryse\Desktop\Tasquinha-da-Ana-main\bin\Debug\Tasquinha da Ana.exe.config
+C:\Users\cryse\Desktop\Tasquinha-da-Ana-main\bin\Debug\Tasquinha da Ana.exe.manifest
+C:\Users\cryse\Desktop\Tasquinha-da-Ana-main\bin\Debug\Tasquinha da Ana.application
+C:\Users\cryse\Desktop\Tasquinha-da-Ana-main\bin\Debug\Tasquinha da Ana.exe
+C:\Users\cryse\Desktop\Tasquinha-da-Ana-main\bin\Debug\Tasquinha da Ana.pdb
+C:\Users\cryse\Desktop\Tasquinha-da-Ana-main\obj\Debug\PedidosRulote.csproj.CoreCompileInputs.cache
+C:\Users\cryse\Desktop\Tasquinha-da-Ana-main\obj\Debug\Tasquinha da Ana.exe.manifest
+C:\Users\cryse\Desktop\Tasquinha-da-Ana-main\obj\Debug\Tasquinha da Ana.application
+C:\Users\cryse\Desktop\Tasquinha-da-Ana-main\obj\Debug\Tasquinha da Ana.exe
+C:\Users\cryse\Desktop\Tasquinha-da-Ana-main\obj\Debug\Tasquinha da Ana.pdb
+E:\Tasquinha-da-Ana-main\bin\Debug\Tasquinha da Ana.exe.config
+E:\Tasquinha-da-Ana-main\bin\Debug\Tasquinha da Ana.exe.manifest
+E:\Tasquinha-da-Ana-main\bin\Debug\Tasquinha da Ana.application
+E:\Tasquinha-da-Ana-main\bin\Debug\Tasquinha da Ana.exe
+E:\Tasquinha-da-Ana-main\bin\Debug\Tasquinha da Ana.pdb
+E:\Tasquinha-da-Ana-main\obj\Debug\PedidosRulote.csproj.AssemblyReference.cache
+E:\Tasquinha-da-Ana-main\obj\Debug\PedidosRulote.csproj.SuggestedBindingRedirects.cache
+E:\Tasquinha-da-Ana-main\obj\Debug\PedidosRulote.Form1.resources
+E:\Tasquinha-da-Ana-main\obj\Debug\PedidosRulote.Properties.Resources.resources
+E:\Tasquinha-da-Ana-main\obj\Debug\PedidosRulote.csproj.GenerateResource.cache
+E:\Tasquinha-da-Ana-main\obj\Debug\PedidosRulote.csproj.CoreCompileInputs.cache
+E:\Tasquinha-da-Ana-main\obj\Debug\Tasquinha da Ana.exe.manifest
+E:\Tasquinha-da-Ana-main\obj\Debug\Tasquinha da Ana.application
+E:\Tasquinha-da-Ana-main\obj\Debug\Tasquinha da Ana.exe
+E:\Tasquinha-da-Ana-main\obj\Debug\Tasquinha da Ana.pdb

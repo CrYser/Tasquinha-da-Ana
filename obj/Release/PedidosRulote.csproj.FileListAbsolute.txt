@@ -1,0 +1,5 @@
+C:\Users\cryse\Desktop\Tasquinha-da-Ana-main\obj\Release\PedidosRulote.csproj.AssemblyReference.cache
+C:\Users\cryse\Desktop\Tasquinha-da-Ana-main\obj\Release\PedidosRulote.csproj.SuggestedBindingRedirects.cache
+C:\Users\cryse\Desktop\Tasquinha-da-Ana-main\obj\Release\PedidosRulote.Form1.resources
+C:\Users\cryse\Desktop\Tasquinha-da-Ana-main\obj\Release\PedidosRulote.Properties.Resources.resources
+C:\Users\cryse\Desktop\Tasquinha-da-Ana-main\obj\Release\PedidosRulote.csproj.GenerateResource.cache

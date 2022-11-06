@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.Label EncomendaLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.TXTNome = new System.Windows.Forms.TextBox();
@@ -57,19 +58,17 @@
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.BTNGravar = new System.Windows.Forms.Button();
-            this.ListaEncomenda = new System.Windows.Forms.ListBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.IngredientesCheckedBox = new System.Windows.Forms.CheckedListBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.BTNLerFicheiro = new System.Windows.Forms.Button();
             this.BTNLimpar = new System.Windows.Forms.Button();
             this.TXTEncomenda = new System.Windows.Forms.TextBox();
-            this.BTNNova = new System.Windows.Forms.Button();
             this.BTNFechar = new System.Windows.Forms.Button();
             this.pre_visualizacao = new System.Windows.Forms.PrintPreviewDialog();
             this.Documento = new System.Drawing.Printing.PrintDocument();
             this.BTNImpressao = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.OvoCheckBox = new System.Windows.Forms.CheckBox();
+            this.TodosIngredientes = new System.Windows.Forms.Button();
+            EncomendaLabel = new System.Windows.Forms.Label();
             this.panelItem.SuspendLayout();
             this.panelKebab.SuspendLayout();
             this.panelBifana.SuspendLayout();
@@ -77,12 +76,21 @@
             this.panelHamburguer.SuspendLayout();
             this.SuspendLayout();
             // 
+            // EncomendaLabel
+            // 
+            EncomendaLabel.Location = new System.Drawing.Point(474, 21);
+            EncomendaLabel.Name = "EncomendaLabel";
+            EncomendaLabel.Size = new System.Drawing.Size(90, 16);
+            EncomendaLabel.TabIndex = 17;
+            EncomendaLabel.Text = "Encomenda";
+            EncomendaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(10, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 16);
+            this.label1.Size = new System.Drawing.Size(86, 16);
             this.label1.TabIndex = 3;
             this.label1.Text = "Em nome de:";
             // 
@@ -111,7 +119,7 @@
             this.RBHamburguer.AutoSize = true;
             this.RBHamburguer.Location = new System.Drawing.Point(3, 81);
             this.RBHamburguer.Name = "RBHamburguer";
-            this.RBHamburguer.Size = new System.Drawing.Size(104, 20);
+            this.RBHamburguer.Size = new System.Drawing.Size(103, 20);
             this.RBHamburguer.TabIndex = 0;
             this.RBHamburguer.TabStop = true;
             this.RBHamburguer.Text = "Hamburguer ";
@@ -123,7 +131,7 @@
             this.RBCachorro.AutoSize = true;
             this.RBCachorro.Location = new System.Drawing.Point(3, 55);
             this.RBCachorro.Name = "RBCachorro";
-            this.RBCachorro.Size = new System.Drawing.Size(84, 20);
+            this.RBCachorro.Size = new System.Drawing.Size(83, 20);
             this.RBCachorro.TabIndex = 0;
             this.RBCachorro.TabStop = true;
             this.RBCachorro.Text = "Cachorro ";
@@ -135,7 +143,7 @@
             this.RBBifana.AutoSize = true;
             this.RBBifana.Location = new System.Drawing.Point(3, 29);
             this.RBBifana.Name = "RBBifana";
-            this.RBBifana.Size = new System.Drawing.Size(67, 20);
+            this.RBBifana.Size = new System.Drawing.Size(66, 20);
             this.RBBifana.TabIndex = 0;
             this.RBBifana.TabStop = true;
             this.RBBifana.Text = "Bifana ";
@@ -148,7 +156,7 @@
             this.RBKebab.Checked = true;
             this.RBKebab.Location = new System.Drawing.Point(3, 3);
             this.RBKebab.Name = "RBKebab";
-            this.RBKebab.Size = new System.Drawing.Size(69, 20);
+            this.RBKebab.Size = new System.Drawing.Size(68, 20);
             this.RBKebab.TabIndex = 0;
             this.RBKebab.TabStop = true;
             this.RBKebab.Text = "Kebab ";
@@ -173,7 +181,7 @@
             this.radioButton8.AutoSize = true;
             this.radioButton8.Location = new System.Drawing.Point(3, 55);
             this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(79, 20);
+            this.radioButton8.Size = new System.Drawing.Size(78, 20);
             this.radioButton8.TabIndex = 1;
             this.radioButton8.TabStop = true;
             this.radioButton8.Text = "Durum M";
@@ -184,7 +192,7 @@
             this.RBBox.AutoSize = true;
             this.RBBox.Location = new System.Drawing.Point(3, 133);
             this.RBBox.Name = "RBBox";
-            this.RBBox.Size = new System.Drawing.Size(49, 20);
+            this.RBBox.Size = new System.Drawing.Size(48, 20);
             this.RBBox.TabIndex = 0;
             this.RBBox.TabStop = true;
             this.RBBox.Text = "Box";
@@ -195,7 +203,7 @@
             this.RBBoloCaco.AutoSize = true;
             this.RBBoloCaco.Location = new System.Drawing.Point(3, 107);
             this.RBBoloCaco.Name = "RBBoloCaco";
-            this.RBBoloCaco.Size = new System.Drawing.Size(106, 20);
+            this.RBBoloCaco.Size = new System.Drawing.Size(105, 20);
             this.RBBoloCaco.TabIndex = 0;
             this.RBBoloCaco.TabStop = true;
             this.RBBoloCaco.Text = "Bolo do caco";
@@ -206,7 +214,7 @@
             this.RBXL.AutoSize = true;
             this.RBXL.Location = new System.Drawing.Point(3, 81);
             this.RBXL.Name = "RBXL";
-            this.RBXL.Size = new System.Drawing.Size(83, 20);
+            this.RBXL.Size = new System.Drawing.Size(82, 20);
             this.RBXL.TabIndex = 0;
             this.RBXL.TabStop = true;
             this.RBXL.Text = "Durum XL";
@@ -217,7 +225,7 @@
             this.RBPaoPita.AutoSize = true;
             this.RBPaoPita.Location = new System.Drawing.Point(3, 29);
             this.RBPaoPita.Name = "RBPaoPita";
-            this.RBPaoPita.Size = new System.Drawing.Size(76, 20);
+            this.RBPaoPita.Size = new System.Drawing.Size(75, 20);
             this.RBPaoPita.TabIndex = 0;
             this.RBPaoPita.TabStop = true;
             this.RBPaoPita.Text = "Pão pita";
@@ -229,7 +237,7 @@
             this.RBMPaoNormal.Checked = true;
             this.RBMPaoNormal.Location = new System.Drawing.Point(3, 3);
             this.RBMPaoNormal.Name = "RBMPaoNormal";
-            this.RBMPaoNormal.Size = new System.Drawing.Size(95, 20);
+            this.RBMPaoNormal.Size = new System.Drawing.Size(94, 20);
             this.RBMPaoNormal.TabIndex = 0;
             this.RBMPaoNormal.TabStop = true;
             this.RBMPaoNormal.Text = "Pão normal";
@@ -251,7 +259,7 @@
             this.radioButton10.AutoSize = true;
             this.radioButton10.Location = new System.Drawing.Point(3, 55);
             this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(106, 20);
+            this.radioButton10.Size = new System.Drawing.Size(105, 20);
             this.radioButton10.TabIndex = 0;
             this.radioButton10.Text = "Bolo do caco";
             this.radioButton10.UseVisualStyleBackColor = true;
@@ -261,7 +269,7 @@
             this.RBCompleta.AutoSize = true;
             this.RBCompleta.Location = new System.Drawing.Point(3, 29);
             this.RBCompleta.Name = "RBCompleta";
-            this.RBCompleta.Size = new System.Drawing.Size(84, 20);
+            this.RBCompleta.Size = new System.Drawing.Size(83, 20);
             this.RBCompleta.TabIndex = 0;
             this.RBCompleta.Text = "Completa";
             this.RBCompleta.UseVisualStyleBackColor = true;
@@ -272,7 +280,7 @@
             this.RBSimples.Checked = true;
             this.RBSimples.Location = new System.Drawing.Point(3, 3);
             this.RBSimples.Name = "RBSimples";
-            this.RBSimples.Size = new System.Drawing.Size(75, 20);
+            this.RBSimples.Size = new System.Drawing.Size(74, 20);
             this.RBSimples.TabIndex = 0;
             this.RBSimples.TabStop = true;
             this.RBSimples.Text = "Simples";
@@ -294,7 +302,7 @@
             this.radioButton9.AutoSize = true;
             this.radioButton9.Location = new System.Drawing.Point(4, 57);
             this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(140, 20);
+            this.radioButton9.Size = new System.Drawing.Size(139, 20);
             this.radioButton9.TabIndex = 0;
             this.radioButton9.Text = "à Manekas (Duplo)";
             this.radioButton9.UseVisualStyleBackColor = true;
@@ -304,7 +312,7 @@
             this.radioButton1.AutoSize = true;
             this.radioButton1.Location = new System.Drawing.Point(4, 31);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(84, 20);
+            this.radioButton1.Size = new System.Drawing.Size(83, 20);
             this.radioButton1.TabIndex = 0;
             this.radioButton1.Text = "Completo";
             this.radioButton1.UseVisualStyleBackColor = true;
@@ -315,7 +323,7 @@
             this.radioButton2.Checked = true;
             this.radioButton2.Location = new System.Drawing.Point(4, 5);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(75, 20);
+            this.radioButton2.Size = new System.Drawing.Size(74, 20);
             this.radioButton2.TabIndex = 0;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Simples";
@@ -339,7 +347,7 @@
             this.radioButton4.Checked = true;
             this.radioButton4.Location = new System.Drawing.Point(3, 3);
             this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(75, 20);
+            this.radioButton4.Size = new System.Drawing.Size(74, 20);
             this.radioButton4.TabIndex = 0;
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "Simples";
@@ -350,7 +358,7 @@
             this.radioButton6.AutoSize = true;
             this.radioButton6.Location = new System.Drawing.Point(3, 81);
             this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(83, 20);
+            this.radioButton6.Size = new System.Drawing.Size(82, 20);
             this.radioButton6.TabIndex = 0;
             this.radioButton6.Text = "à David\'s";
             this.radioButton6.UseVisualStyleBackColor = true;
@@ -360,7 +368,7 @@
             this.radioButton5.AutoSize = true;
             this.radioButton5.Location = new System.Drawing.Point(3, 55);
             this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(106, 20);
+            this.radioButton5.Size = new System.Drawing.Size(105, 20);
             this.radioButton5.TabIndex = 0;
             this.radioButton5.Text = "Bolo do caco";
             this.radioButton5.UseVisualStyleBackColor = true;
@@ -370,51 +378,34 @@
             this.radioButton3.AutoSize = true;
             this.radioButton3.Location = new System.Drawing.Point(3, 29);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(84, 20);
+            this.radioButton3.Size = new System.Drawing.Size(83, 20);
             this.radioButton3.TabIndex = 0;
             this.radioButton3.Text = "Completo";
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
             // BTNGravar
             // 
+            this.BTNGravar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.BTNGravar.BackColor = System.Drawing.Color.DarkGray;
             this.BTNGravar.FlatAppearance.BorderSize = 0;
             this.BTNGravar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNGravar.Location = new System.Drawing.Point(391, 364);
+            this.BTNGravar.Location = new System.Drawing.Point(13, 514);
             this.BTNGravar.Name = "BTNGravar";
-            this.BTNGravar.Size = new System.Drawing.Size(150, 35);
+            this.BTNGravar.Size = new System.Drawing.Size(200, 35);
             this.BTNGravar.TabIndex = 15;
             this.BTNGravar.Text = "Gravar Encomenda";
             this.BTNGravar.UseVisualStyleBackColor = false;
             this.BTNGravar.Click += new System.EventHandler(this.BTNGravar_Click);
             // 
-            // ListaEncomenda
+            // IngredientesCheckedBox
             // 
-            this.ListaEncomenda.BackColor = System.Drawing.SystemColors.Control;
-            this.ListaEncomenda.FormattingEnabled = true;
-            this.ListaEncomenda.ItemHeight = 16;
-            this.ListaEncomenda.Location = new System.Drawing.Point(315, 27);
-            this.ListaEncomenda.Name = "ListaEncomenda";
-            this.ListaEncomenda.Size = new System.Drawing.Size(290, 260);
-            this.ListaEncomenda.TabIndex = 16;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(407, 8);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 16);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "Encomenda";
-            // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.BackColor = System.Drawing.Color.Silver;
-            this.checkedListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.checkedListBox1.CheckOnClick = true;
-            this.checkedListBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
+            this.IngredientesCheckedBox.BackColor = System.Drawing.Color.LightGray;
+            this.IngredientesCheckedBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.IngredientesCheckedBox.CheckOnClick = true;
+            this.IngredientesCheckedBox.Cursor = System.Windows.Forms.Cursors.Default;
+            this.IngredientesCheckedBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IngredientesCheckedBox.FormattingEnabled = true;
+            this.IngredientesCheckedBox.Items.AddRange(new object[] {
             "Alface",
             "Batata",
             "Cebola frita",
@@ -428,41 +419,29 @@
             "Molho Mostarda",
             "Molho Samurai",
             "Molho de Alho"});
-            this.checkedListBox1.Location = new System.Drawing.Point(153, 27);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(147, 238);
-            this.checkedListBox1.TabIndex = 18;
+            this.IngredientesCheckedBox.Location = new System.Drawing.Point(153, 27);
+            this.IngredientesCheckedBox.Name = "IngredientesCheckedBox";
+            this.IngredientesCheckedBox.Size = new System.Drawing.Size(147, 285);
+            this.IngredientesCheckedBox.TabIndex = 18;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(183, 8);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 16);
+            this.label2.Size = new System.Drawing.Size(81, 16);
             this.label2.TabIndex = 19;
             this.label2.Text = "Ingredientes";
             // 
-            // BTNLerFicheiro
-            // 
-            this.BTNLerFicheiro.BackColor = System.Drawing.Color.DarkGray;
-            this.BTNLerFicheiro.FlatAppearance.BorderSize = 0;
-            this.BTNLerFicheiro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNLerFicheiro.Location = new System.Drawing.Point(262, 364);
-            this.BTNLerFicheiro.Name = "BTNLerFicheiro";
-            this.BTNLerFicheiro.Size = new System.Drawing.Size(123, 35);
-            this.BTNLerFicheiro.TabIndex = 20;
-            this.BTNLerFicheiro.Text = "Ler Encomenda";
-            this.BTNLerFicheiro.UseVisualStyleBackColor = false;
-            this.BTNLerFicheiro.Click += new System.EventHandler(this.BTNLerFicheiro_Click_1);
-            // 
             // BTNLimpar
             // 
+            this.BTNLimpar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.BTNLimpar.BackColor = System.Drawing.Color.DarkGray;
             this.BTNLimpar.FlatAppearance.BorderSize = 0;
             this.BTNLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNLimpar.Location = new System.Drawing.Point(11, 364);
+            this.BTNLimpar.Location = new System.Drawing.Point(245, 514);
             this.BTNLimpar.Name = "BTNLimpar";
-            this.BTNLimpar.Size = new System.Drawing.Size(114, 35);
+            this.BTNLimpar.Size = new System.Drawing.Size(200, 35);
             this.BTNLimpar.TabIndex = 21;
             this.BTNLimpar.Text = "Limpar Campos";
             this.BTNLimpar.UseVisualStyleBackColor = false;
@@ -470,35 +449,31 @@
             // 
             // TXTEncomenda
             // 
+            this.TXTEncomenda.AcceptsReturn = true;
+            this.TXTEncomenda.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TXTEncomenda.BackColor = System.Drawing.Color.Silver;
             this.TXTEncomenda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TXTEncomenda.Location = new System.Drawing.Point(307, 27);
+            this.TXTEncomenda.Cursor = System.Windows.Forms.Cursors.Default;
+            this.TXTEncomenda.Location = new System.Drawing.Point(369, 40);
+            this.TXTEncomenda.MinimumSize = new System.Drawing.Size(300, 400);
             this.TXTEncomenda.Multiline = true;
             this.TXTEncomenda.Name = "TXTEncomenda";
-            this.TXTEncomenda.Size = new System.Drawing.Size(305, 290);
+            this.TXTEncomenda.ReadOnly = true;
+            this.TXTEncomenda.Size = new System.Drawing.Size(300, 400);
             this.TXTEncomenda.TabIndex = 22;
-            // 
-            // BTNNova
-            // 
-            this.BTNNova.BackColor = System.Drawing.Color.DarkGray;
-            this.BTNNova.FlatAppearance.BorderSize = 0;
-            this.BTNNova.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNNova.Location = new System.Drawing.Point(131, 364);
-            this.BTNNova.Name = "BTNNova";
-            this.BTNNova.Size = new System.Drawing.Size(125, 35);
-            this.BTNNova.TabIndex = 23;
-            this.BTNNova.Text = "Nova Encomenda";
-            this.BTNNova.UseVisualStyleBackColor = false;
-            this.BTNNova.Click += new System.EventHandler(this.BTNNova_Click);
+            this.TXTEncomenda.TabStop = false;
             // 
             // BTNFechar
             // 
+            this.BTNFechar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.BTNFechar.BackColor = System.Drawing.Color.DarkGray;
             this.BTNFechar.FlatAppearance.BorderSize = 0;
             this.BTNFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNFechar.Location = new System.Drawing.Point(547, 364);
+            this.BTNFechar.Location = new System.Drawing.Point(472, 514);
             this.BTNFechar.Name = "BTNFechar";
-            this.BTNFechar.Size = new System.Drawing.Size(65, 35);
+            this.BTNFechar.Size = new System.Drawing.Size(200, 35);
             this.BTNFechar.TabIndex = 24;
             this.BTNFechar.Text = "Fechar";
             this.BTNFechar.UseVisualStyleBackColor = false;
@@ -520,10 +495,12 @@
             // 
             // BTNImpressao
             // 
+            this.BTNImpressao.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.BTNImpressao.BackColor = System.Drawing.Color.DarkGray;
+            this.BTNImpressao.Enabled = false;
             this.BTNImpressao.FlatAppearance.BorderSize = 0;
             this.BTNImpressao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNImpressao.Location = new System.Drawing.Point(489, 323);
+            this.BTNImpressao.Location = new System.Drawing.Point(510, 473);
             this.BTNImpressao.Name = "BTNImpressao";
             this.BTNImpressao.Size = new System.Drawing.Size(123, 35);
             this.BTNImpressao.TabIndex = 25;
@@ -531,47 +508,59 @@
             this.BTNImpressao.UseVisualStyleBackColor = false;
             this.BTNImpressao.Click += new System.EventHandler(this.BTNImpressao_Click);
             // 
-            // checkBox1
+            // OvoCheckBox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(154, 247);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(145, 20);
-            this.checkBox1.TabIndex = 26;
-            this.checkBox1.Text = "Com Ovo (+50 Cent)";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.OvoCheckBox.AutoSize = true;
+            this.OvoCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OvoCheckBox.Location = new System.Drawing.Point(154, 273);
+            this.OvoCheckBox.Name = "OvoCheckBox";
+            this.OvoCheckBox.Size = new System.Drawing.Size(166, 22);
+            this.OvoCheckBox.TabIndex = 26;
+            this.OvoCheckBox.Text = "Com Ovo (+50 Cent)";
+            this.OvoCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // TodosIngredientes
+            // 
+            this.TodosIngredientes.BackColor = System.Drawing.Color.DarkGray;
+            this.TodosIngredientes.FlatAppearance.BorderSize = 0;
+            this.TodosIngredientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TodosIngredientes.Location = new System.Drawing.Point(160, 301);
+            this.TodosIngredientes.Name = "TodosIngredientes";
+            this.TodosIngredientes.Size = new System.Drawing.Size(160, 35);
+            this.TodosIngredientes.TabIndex = 23;
+            this.TodosIngredientes.Text = "Todos Ingredientes";
+            this.TodosIngredientes.UseVisualStyleBackColor = false;
+            this.TodosIngredientes.Click += new System.EventHandler(this.TodosIngredientes_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(623, 411);
+            this.BackColor = System.Drawing.Color.LightGray;
+            this.ClientSize = new System.Drawing.Size(684, 561);
             this.ControlBox = false;
+            this.Controls.Add(this.BTNLimpar);
+            this.Controls.Add(this.BTNFechar);
+            this.Controls.Add(this.BTNGravar);
             this.Controls.Add(this.panelBifana);
             this.Controls.Add(this.panelHamburguer);
-            this.Controls.Add(this.panelCachorro);
-            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.BTNImpressao);
-            this.Controls.Add(this.BTNFechar);
-            this.Controls.Add(this.BTNNova);
+            this.Controls.Add(this.panelCachorro);
+            this.Controls.Add(this.OvoCheckBox);
+            this.Controls.Add(this.TodosIngredientes);
             this.Controls.Add(this.TXTEncomenda);
-            this.Controls.Add(this.BTNLimpar);
-            this.Controls.Add(this.BTNLerFicheiro);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.checkedListBox1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.ListaEncomenda);
-            this.Controls.Add(this.BTNGravar);
+            this.Controls.Add(this.IngredientesCheckedBox);
+            this.Controls.Add(EncomendaLabel);
             this.Controls.Add(this.panelItem);
             this.Controls.Add(this.TXTNome);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panelKebab);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(700, 1000);
+            this.MinimumSize = new System.Drawing.Size(700, 600);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tasquinha da Ana";
@@ -615,24 +604,21 @@
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.Button BTNGravar;
-        private System.Windows.Forms.ListBox ListaEncomenda;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox IngredientesCheckedBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button BTNLerFicheiro;
         private System.Windows.Forms.Button BTNLimpar;
         private System.Windows.Forms.TextBox TXTEncomenda;
-        private System.Windows.Forms.Button BTNNova;
         private System.Windows.Forms.Button BTNFechar;
         private System.Windows.Forms.PrintPreviewDialog pre_visualizacao;
         private System.Drawing.Printing.PrintDocument Documento;
         private System.Windows.Forms.Button BTNImpressao;
         private System.Windows.Forms.RadioButton radioButton8;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox OvoCheckBox;
         private System.Windows.Forms.RadioButton radioButton9;
         private System.Windows.Forms.RadioButton radioButton10;
         private System.Windows.Forms.RadioButton radioButton6;
         private System.Windows.Forms.RadioButton radioButton5;
+        private System.Windows.Forms.Button TodosIngredientes;
     }
 }
 

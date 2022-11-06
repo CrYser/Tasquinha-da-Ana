@@ -11,41 +11,43 @@ namespace PedidosRulote
 
     public partial class Form1 : Form
     {
+        bool ischecked = false;
         int contagemitens;
         float preco = 0.00f;
-        readonly string Tasquinha_da_Ana = System.AppDomain.CurrentDomain.BaseDirectory;
+        readonly string Localizacao = System.AppDomain.CurrentDomain.BaseDirectory;
         readonly string dateAndTime = DateTime.Now.ToString("yyyy-MM-dd");
 
-        //===============================================================================================================
         public Form1()
         {
             InitializeComponent();
         }
 
-        //===============================================================================================================
-        private void Form1_Load(object sender, EventArgs e)
+        public void Form1_Load(object sender, EventArgs e)
         {
-            BTNNova.Enabled = false;
-            BTNLerFicheiro.Enabled = true;
-            BTNGravar.Enabled = false;
-            BTNImpressao.Enabled = false;
+            if (File.Exists(Localizacao + "Encomenda " + dateAndTime + ".txt"))
+            {
+                StreamReader ficheiro = new StreamReader(Localizacao + "Encomenda " + dateAndTime + ".txt", Encoding.Default);
+                TXTEncomenda.Text = ficheiro.ReadToEnd();
+
+                ficheiro.Close();
+                File.Delete(Localizacao + "Encomenda " + dateAndTime + ".txt");
+                BTNImpressao.Enabled = true;
+            }
         }
 
-        //===============================================================================================================
-        private void BTNGravar_Click(object sender, EventArgs e)
+        void BTNGravar_Click(object sender, EventArgs e)
         {
-            ListaEncomenda.Items.Add(TXTNome.Text + " - ");
+            TXTEncomenda.Text += TXTNome.Text + " - ";
 
             if (RBKebab.Checked)
             {
-                string txt = "";
-                txt = panelItem.Controls.OfType<RadioButton>().SingleOrDefault(RadioButton => RadioButton.Checked).Text;
-                ListaEncomenda.Items.Add(txt);
+                string txt = panelItem.Controls.OfType<RadioButton>().SingleOrDefault(RadioButton => RadioButton.Checked).Text;
+                TXTEncomenda.Text += txt;
 
-                string tipokebab = "";
-                tipokebab = panelKebab.Controls.OfType<RadioButton>().SingleOrDefault(RadioButton => RadioButton.Checked).Text;
-                ListaEncomenda.Items.Add(tipokebab);
+                string tipokebab = panelKebab.Controls.OfType<RadioButton>().SingleOrDefault(RadioButton => RadioButton.Checked).Text;
+                TXTEncomenda.Text += tipokebab;
 
+                //TODO: alterar preços dos kebab
                 switch (panelKebab.Controls.OfType<RadioButton>().SingleOrDefault(RadioButton => RadioButton.Checked).Text)
                 {
                     case "Durum M":
@@ -72,24 +74,22 @@ namespace PedidosRulote
             }
             else if (RBBifana.Checked)
             {
-                string txt = "";
-                txt = panelItem.Controls.OfType<RadioButton>().SingleOrDefault(RadioButton => RadioButton.Checked).Text;
-                ListaEncomenda.Items.Add(txt);
+                string txt = panelItem.Controls.OfType<RadioButton>().SingleOrDefault(RadioButton => RadioButton.Checked).Text;
+                TXTEncomenda.Text += txt;
 
-                string tipobifana = "";
-                tipobifana = panelBifana.Controls.OfType<RadioButton>().SingleOrDefault(RadioButton => RadioButton.Checked).Text;
-                ListaEncomenda.Items.Add(tipobifana);
+                string tipobifana = panelBifana.Controls.OfType<RadioButton>().SingleOrDefault(RadioButton => RadioButton.Checked).Text;
+                TXTEncomenda.Text += tipobifana;
 
                 switch (panelBifana.Controls.OfType<RadioButton>().SingleOrDefault(RadioButton => RadioButton.Checked).Text)
                 {
                     case "Simples":
-                        preco += 3.30f;
+                        preco += 3.50f;
                         break;
                     case "Completa":
-                        preco += 4.10f;
+                        preco += 4.20f;
                         break;
                     case "Bolo do caco":
-                        preco += 3.90f;
+                        preco += 4.00f;
                         break;
                 }
 
@@ -97,21 +97,19 @@ namespace PedidosRulote
             }
             else if (RBCachorro.Checked)
             {
-                string txt = "";
-                txt = panelItem.Controls.OfType<RadioButton>().SingleOrDefault(RadioButton => RadioButton.Checked).Text;
-                ListaEncomenda.Items.Add(txt);
+                string txt = panelItem.Controls.OfType<RadioButton>().SingleOrDefault(RadioButton => RadioButton.Checked).Text;
+                TXTEncomenda.Text += txt;
 
-                string tipocachorro = "";
-                tipocachorro = panelCachorro.Controls.OfType<RadioButton>().SingleOrDefault(RadioButton => RadioButton.Checked).Text;
-                ListaEncomenda.Items.Add(tipocachorro);
+                string tipocachorro = panelCachorro.Controls.OfType<RadioButton>().SingleOrDefault(RadioButton => RadioButton.Checked).Text;
+                TXTEncomenda.Text += tipocachorro;
 
                 switch (panelCachorro.Controls.OfType<RadioButton>().SingleOrDefault(RadioButton => RadioButton.Checked).Text)
                 {
                     case "Simples":
-                        preco += 3.30f;
+                        preco += 3.50f;
                         break;
                     case "Completo":
-                        preco += 4.00f;
+                        preco += 4.20f;
                         break;
                     case "à Manekas (Duplo)":
                         preco += 4.90f;
@@ -122,129 +120,99 @@ namespace PedidosRulote
             }
             else if (RBHamburguer.Checked)
             {
-                string txt = "";
-                txt = panelItem.Controls.OfType<RadioButton>().SingleOrDefault(RadioButton => RadioButton.Checked).Text;
-                ListaEncomenda.Items.Add(txt);
+                string txt = panelItem.Controls.OfType<RadioButton>().SingleOrDefault(RadioButton => RadioButton.Checked).Text;
+                TXTEncomenda.Text += txt;
 
-                string tipohamburguer = "";
-                tipohamburguer = panelHamburguer.Controls.OfType<RadioButton>().SingleOrDefault(RadioButton => RadioButton.Checked).Text;
-                ListaEncomenda.Items.Add(tipohamburguer);
+                string tipohamburguer = panelHamburguer.Controls.OfType<RadioButton>().SingleOrDefault(RadioButton => RadioButton.Checked).Text;
+                TXTEncomenda.Text += tipohamburguer;
+
 
                 switch (panelHamburguer.Controls.OfType<RadioButton>().SingleOrDefault(RadioButton => RadioButton.Checked).Text)
                 {
                     case "Simples":
-                        preco += 3.50f;
+                        preco += 4.00f;
                         break;
                     case "Completo":
-                        preco += 4.10f;
+                        preco += 4.50f;
                         break;
                     case "Bolo do caco":
-                        preco += 3.90f;
+                        preco += 4.00f;
                         break;
                     case "à David's":
-                        preco += 4.90f;
+                        preco += 5.00f;
                         break;
                 }
 
                 AddIngredientes();
             }
-
-            StringBuilder stringB = new StringBuilder();
-            foreach (var item in ListaEncomenda.Items)
-            {
-                stringB.Append(item.ToString());
-            }
-            TXTEncomenda.Text = (stringB.ToString());
-            Gravarficheiro();
-            NovaEncomenda();
-            BTNLerFicheiro.Enabled = true;
-            BTNGravar.Enabled = false;
-            BTNNova.Enabled = true;
-            BTNLimpar.Enabled = false;
+            Apagarcampos();
+            TXTNome.Focus();
+            BTNImpressao.Enabled = true;
             contagemitens = 0;
+            ischecked = false;
         }
 
-        //===============================================================================================================
         private void AddIngredientes()
         {
-            ListaEncomenda.Items.Add(" - ");
-                
-            for (int i = 0; i < checkedListBox1.CheckedItems.Count; i++)
+            TXTEncomenda.Text += " - ";
+            for (int i = 0; i < IngredientesCheckedBox.CheckedItems.Count; i++)
             {
-                string s = (string)checkedListBox1.CheckedItems[i];
-                ListaEncomenda.Items.Add(s);
-                if (contagemitens == checkedListBox1.CheckedItems.Count - 1 && checkBox1.Checked == false)
-                    ListaEncomenda.Items.Add(" - ");
+                string s = (string)IngredientesCheckedBox.CheckedItems[i];
+                TXTEncomenda.Text += s;
+                if (contagemitens == IngredientesCheckedBox.CheckedItems.Count - 1 && OvoCheckBox.Checked == false)
+                    TXTEncomenda.Text += " - ";
                 else
                 {
                     contagemitens++;
-                    ListaEncomenda.Items.Add(", ");
+                    TXTEncomenda.Text += ", ";
                 }
             }
 
-            if (checkBox1.Checked)
+            if (OvoCheckBox.Checked)
             {
-                ListaEncomenda.Items.Add("Ovo - ");
+                TXTEncomenda.Text += "Ovo - ";
                 preco += 0.50f;
             }
 
-            ListaEncomenda.Items.Add(preco + "€");
+            TXTEncomenda.Text += preco + "€" + Environment.NewLine + Environment.NewLine;
         }
 
-        //===============================================================================================================
         #region Paineis
 
-        //===============================================================================================================
         private void RBKebab_Checked(object sender, EventArgs e)
         {
             panelKebab.Visible = RBKebab.Checked;
         }
 
-        //===============================================================================================================
         private void RBBifana_CheckedChanged_1(object sender, EventArgs e)
         {
             panelBifana.Visible = RBBifana.Checked;
         }
 
-        //===============================================================================================================
         private void RBCachorro_CheckedChanged_1(object sender, EventArgs e)
         {
             panelCachorro.Visible = RBCachorro.Checked;
         }
 
-        //===============================================================================================================
         private void RBHamburguer_CheckedChanged_1(object sender, EventArgs e)
         {
             panelHamburguer.Visible = RBHamburguer.Checked;
         }
         #endregion
 
-        //===============================================================================================================
         private void BTNLimpar_Click(object sender, EventArgs e)
         {
             Apagarcampos();
             TXTNome.Focus();
-            BTNLerFicheiro.Enabled = true;
-            BTNGravar.Enabled = false;
         }
 
-        //===============================================================================================================
-        private void BTNNova_Click(object sender, EventArgs e)
-        {
-            Apagarcampos();
-            TXTNome.Focus();
-        }
-
-        //===============================================================================================================
         private void Apagarcampos()
         {
-            ListaEncomenda.Items.Clear();
-            TXTEncomenda.Clear();
             TXTNome.Clear();
             preco = 0.00f;
-            checkBox1.Checked = false;
-            for (int i = 0; i < checkedListBox1.Items.Count; i++)
-                checkedListBox1.SetItemChecked(i, false);
+            OvoCheckBox.Checked = false;
+            for (int i = 0; i < IngredientesCheckedBox.Items.Count; i++)
+                IngredientesCheckedBox.SetItemChecked(i, false);
             foreach (Control c in panelItem.Controls)
             {
                 if (c is RadioButton rb)
@@ -284,62 +252,52 @@ namespace PedidosRulote
                     rb.Checked = true;
                 }
             }
-
-            BTNGravar.Enabled = false;
-            BTNLimpar.Enabled = true;
-            BTNNova.Enabled = false;
-            BTNImpressao.Enabled = false;
         }
 
-        //===============================================================================================================
-        private void Gravarficheiro()
-        {
-            StreamWriter ficheiro = new StreamWriter(Tasquinha_da_Ana + "Encomenda " + dateAndTime + ".txt", true, Encoding.Default);
-            ficheiro.WriteLine((string)TXTEncomenda.Text);
-
-            ficheiro.Dispose();
-        }
-
-        //===============================================================================================================
         private void BTNFechar_Click(object sender, EventArgs e)
         {
+            StreamWriter ficheiro = new StreamWriter(Localizacao + "Encomenda " + dateAndTime + ".txt", true, Encoding.Default);
+            ficheiro.Write(TXTEncomenda.Text);
+
+            ficheiro.Close();
+
             Application.Exit();
         }
 
-        //===============================================================================================================
         private void TXTNome_TextChanged(object sender, EventArgs e)
         {
-            if (TXTNome.Text != "")
+            if (TXTNome.Text == "")
+                BTNGravar.Enabled = false;
+            else
                 BTNGravar.Enabled = true;
         }
 
-        //===============================================================================================================
-        private void BTNLerFicheiro_Click_1(object sender, EventArgs e)
-        {
-            if (File.Exists(Tasquinha_da_Ana + "Encomenda " + dateAndTime + ".txt"))
-            {
-                StreamReader ficheiro = new StreamReader(Tasquinha_da_Ana + "Encomenda " + dateAndTime + ".txt", Encoding.Default);
-                TXTEncomenda.Text = ficheiro.ReadToEnd();
-
-                ficheiro.Dispose();
-                BTNImpressao.Enabled = true;
-                BTNLimpar.Enabled = true;
-                BTNGravar.Enabled = false;
-            }
-            else
-            {
-                MessageBox.Show("Não há nenhuma encomenda criada para o dia de hoje");
-            }
-        }
-
-        //===============================================================================================================
         private void BTNImpressao_Click(object sender, EventArgs e)
         {
             pre_visualizacao.Document = Documento;
+            pre_visualizacao.Height = 1280;
+            pre_visualizacao.Width = 720;
             pre_visualizacao.ShowDialog();
         }
-
-        //===============================================================================================================
+        private void TodosIngredientes_Click(object sender, EventArgs e)
+        {
+            if (!ischecked)
+            {
+                for (int i = 0; i < IngredientesCheckedBox.Items.Count - 5; i++)
+                {
+                    IngredientesCheckedBox.SetItemChecked(i, true);
+                    ischecked = true;
+                }
+            }
+            else
+            {
+                for (int i = 0; i < IngredientesCheckedBox.Items.Count - 5; i++)
+                {
+                    IngredientesCheckedBox.SetItemChecked(i, false);
+                    ischecked = false;
+                }
+            }
+        }
         private void Documento_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             int y = 25;
@@ -355,18 +313,6 @@ namespace PedidosRulote
             };
 
             e.Graphics.DrawString(texto, letra, cor, rec, alinhamento);
-        }
-
-        //===============================================================================================================
-        private void NovaEncomenda()
-        {
-            Apagarcampos();
-
-            StreamWriter ficheiro = new StreamWriter(Tasquinha_da_Ana + "Encomenda " + dateAndTime + ".txt", true, Encoding.Default);
-            ficheiro.WriteLine((string)TXTEncomenda.Text);
-
-            ficheiro.Dispose();
-            TXTNome.Focus();
         }
     }
 }
