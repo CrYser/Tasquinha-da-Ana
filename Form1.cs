@@ -46,26 +46,25 @@ namespace PedidosRulote
 
                 string tipokebab = panelKebab.Controls.OfType<RadioButton>().SingleOrDefault(RadioButton => RadioButton.Checked).Text;
                 TXTEncomenda.Text += tipokebab;
-
-                //TODO: alterar preços dos kebab
+				
                 switch (panelKebab.Controls.OfType<RadioButton>().SingleOrDefault(RadioButton => RadioButton.Checked).Text)
                 {
-                    case "Durum M":
+                    case "Durum M":			//TODO: alterar preco
                         preco += 4.20f;
                         break;
                     case "Durum XL":
-                        preco += 5.00f;
+                        preco += 5.20f;
                         break;
                     case "Pão normal":
-                        preco += 4.10f;
+                        preco += 4.30f;
                         break;
-                    case "Pão pita":
+                    case "Pão pita":		//TODO: alterar preco
                         preco += 4.60f;
                         break;
-                    case "Bolo do caco":
+                    case "Bolo do caco":	//TODO: alterar preco
                         preco += 4.50f;
                         break;
-                    case "Box":
+                    case "Box":				//TODO: alterar preco
                         preco += 4.60f;
                         break;
                 }
@@ -83,12 +82,12 @@ namespace PedidosRulote
                 switch (panelBifana.Controls.OfType<RadioButton>().SingleOrDefault(RadioButton => RadioButton.Checked).Text)
                 {
                     case "Simples":
-                        preco += 3.50f;
+                        preco += 3.70f;
                         break;
                     case "Completa":
-                        preco += 4.20f;
+                        preco += 4.30f;
                         break;
-                    case "Bolo do caco":
+                    case "Bolo do caco":	//TODO: alterar preco
                         preco += 4.00f;
                         break;
                 }
@@ -105,13 +104,13 @@ namespace PedidosRulote
 
                 switch (panelCachorro.Controls.OfType<RadioButton>().SingleOrDefault(RadioButton => RadioButton.Checked).Text)
                 {
-                    case "Simples":
+                    case "Simples":				//TODO: alterar preco
                         preco += 3.50f;
                         break;
-                    case "Completo":
+                    case "Completo":			//TODO: alterar preco
                         preco += 4.20f;
                         break;
-                    case "à Manekas (Duplo)":
+                    case "à Manekas (Duplo)":	//TODO: alterar preco
                         preco += 4.90f;
                         break;
                 }
@@ -129,16 +128,16 @@ namespace PedidosRulote
 
                 switch (panelHamburguer.Controls.OfType<RadioButton>().SingleOrDefault(RadioButton => RadioButton.Checked).Text)
                 {
-                    case "Simples":
+                    case "Simples":			//TODO: alterar preco
                         preco += 4.00f;
                         break;
-                    case "Completo":
+                    case "Completo":		//TODO: alterar preco
                         preco += 4.50f;
                         break;
-                    case "Bolo do caco":
+                    case "Bolo do caco":	//TODO: alterar preco
                         preco += 4.00f;
                         break;
-                    case "à David's":
+                    case "à David's":		//TODO: alterar preco
                         preco += 5.00f;
                         break;
                 }
@@ -171,7 +170,7 @@ namespace PedidosRulote
             if (OvoCheckBox.Checked)
             {
                 TXTEncomenda.Text += "Ovo - ";
-                preco += 0.50f;
+                preco += 0.60f;
             }
 
             TXTEncomenda.Text += preco + "€" + Environment.NewLine + Environment.NewLine;
