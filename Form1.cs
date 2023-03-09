@@ -49,14 +49,14 @@ namespace PedidosRulote
 				
                 switch (panelKebab.Controls.OfType<RadioButton>().SingleOrDefault(RadioButton => RadioButton.Checked).Text)
                 {
-                    case "Durum M":			//TODO: alterar preco
-                        preco += 4.20f;
+                    case "Durum M":
+                        preco += 4.50f;
                         break;
                     case "Durum XL":
                         preco += 5.20f;
                         break;
                     case "Pão normal":
-                        preco += 4.30f;
+                        preco += 4.40f;
                         break;
                     case "Pão pita":		//TODO: alterar preco
                         preco += 4.60f;
@@ -134,8 +134,8 @@ namespace PedidosRulote
                     case "Completo":		//TODO: alterar preco
                         preco += 4.50f;
                         break;
-                    case "Bolo do caco":	//TODO: alterar preco
-                        preco += 4.00f;
+                    case "Bolo do caco":
+                        preco += 4.30f;
                         break;
                     case "à David's":		//TODO: alterar preco
                         preco += 5.00f;
