@@ -64,8 +64,8 @@ namespace PedidosRulote
                     case "Bolo do caco":	//TODO: alterar preco
                         preco += 4.50f;
                         break;
-                    case "Box":				//TODO: alterar preco
-                        preco += 4.60f;
+                    case "Box":
+                        preco += 4.90f;
                         break;
                 }
 

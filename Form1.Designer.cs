@@ -516,7 +516,7 @@
             this.OvoCheckBox.Name = "OvoCheckBox";
             this.OvoCheckBox.Size = new System.Drawing.Size(166, 22);
             this.OvoCheckBox.TabIndex = 26;
-            this.OvoCheckBox.Text = "Com Ovo (+50 Cent)";
+            this.OvoCheckBox.Text = "Com Ovo (+60 Cent)";
             this.OvoCheckBox.UseVisualStyleBackColor = true;
             // 
             // TodosIngredientes
