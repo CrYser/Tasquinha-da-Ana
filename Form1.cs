@@ -131,8 +131,8 @@ namespace PedidosRulote
                     case "Simples":			//TODO: alterar preco
                         preco += 4.00f;
                         break;
-                    case "Completo":		//TODO: alterar preco
-                        preco += 4.50f;
+                    case "Completo":
+                        preco += 4.70f;
                         break;
                     case "Bolo do caco":
                         preco += 4.30f;
