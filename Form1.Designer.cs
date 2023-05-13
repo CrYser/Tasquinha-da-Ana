@@ -293,7 +293,7 @@
             this.panelCachorro.Controls.Add(this.radioButton2);
             this.panelCachorro.Location = new System.Drawing.Point(9, 172);
             this.panelCachorro.Name = "panelCachorro";
-            this.panelCachorro.Size = new System.Drawing.Size(139, 84);
+            this.panelCachorro.Size = new System.Drawing.Size(151, 84);
             this.panelCachorro.TabIndex = 12;
             this.panelCachorro.Visible = false;
             // 
@@ -302,9 +302,9 @@
             this.radioButton9.AutoSize = true;
             this.radioButton9.Location = new System.Drawing.Point(4, 57);
             this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(139, 20);
+            this.radioButton9.Size = new System.Drawing.Size(147, 20);
             this.radioButton9.TabIndex = 0;
-            this.radioButton9.Text = "à Manekas (Duplo)";
+            this.radioButton9.Text = "à Tasquinha (Duplo)";
             this.radioButton9.UseVisualStyleBackColor = true;
             // 
             // radioButton1
@@ -419,7 +419,7 @@
             "Molho Mostarda",
             "Molho Samurai",
             "Molho de Alho"});
-            this.IngredientesCheckedBox.Location = new System.Drawing.Point(153, 27);
+            this.IngredientesCheckedBox.Location = new System.Drawing.Point(166, 27);
             this.IngredientesCheckedBox.Name = "IngredientesCheckedBox";
             this.IngredientesCheckedBox.Size = new System.Drawing.Size(147, 285);
             this.IngredientesCheckedBox.TabIndex = 18;
@@ -427,7 +427,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(183, 8);
+            this.label2.Location = new System.Drawing.Point(204, 8);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 16);
             this.label2.TabIndex = 19;
@@ -512,7 +512,7 @@
             // 
             this.OvoCheckBox.AutoSize = true;
             this.OvoCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OvoCheckBox.Location = new System.Drawing.Point(154, 273);
+            this.OvoCheckBox.Location = new System.Drawing.Point(167, 273);
             this.OvoCheckBox.Name = "OvoCheckBox";
             this.OvoCheckBox.Size = new System.Drawing.Size(166, 22);
             this.OvoCheckBox.TabIndex = 26;
@@ -524,7 +524,7 @@
             this.TodosIngredientes.BackColor = System.Drawing.Color.DarkGray;
             this.TodosIngredientes.FlatAppearance.BorderSize = 0;
             this.TodosIngredientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TodosIngredientes.Location = new System.Drawing.Point(160, 301);
+            this.TodosIngredientes.Location = new System.Drawing.Point(167, 300);
             this.TodosIngredientes.Name = "TodosIngredientes";
             this.TodosIngredientes.Size = new System.Drawing.Size(160, 35);
             this.TodosIngredientes.TabIndex = 23;
@@ -537,13 +537,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(684, 561);
+            this.ClientSize = new System.Drawing.Size(684, 584);
             this.ControlBox = false;
             this.Controls.Add(this.BTNLimpar);
             this.Controls.Add(this.BTNFechar);
             this.Controls.Add(this.BTNGravar);
-            this.Controls.Add(this.panelBifana);
-            this.Controls.Add(this.panelHamburguer);
             this.Controls.Add(this.BTNImpressao);
             this.Controls.Add(this.panelCachorro);
             this.Controls.Add(this.OvoCheckBox);
@@ -556,6 +554,8 @@
             this.Controls.Add(this.TXTNome);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panelKebab);
+            this.Controls.Add(this.panelBifana);
+            this.Controls.Add(this.panelHamburguer);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
