@@ -58,11 +58,11 @@ namespace PedidosRulote
                     case "Pão normal":
                         preco += 4.40f;
                         break;
-                    case "Pão pita":		//TODO: alterar preco
-                        preco += 4.60f;
+                    case "Pão pita":
+                        preco += 4.80f;
                         break;
-                    case "Bolo do caco":	//TODO: alterar preco
-                        preco += 4.50f;
+                    case "Bolo do caco":
+                        preco += 4.70f;
                         break;
                     case "Box":
                         preco += 4.90f;
@@ -87,8 +87,8 @@ namespace PedidosRulote
                     case "Completa":
                         preco += 4.30f;
                         break;
-                    case "Bolo do caco":	//TODO: alterar preco
-                        preco += 4.00f;
+                    case "Bolo do caco":
+                        preco += 4.10f;
                         break;
                 }
 
@@ -104,14 +104,14 @@ namespace PedidosRulote
 
                 switch (panelCachorro.Controls.OfType<RadioButton>().SingleOrDefault(RadioButton => RadioButton.Checked).Text)
                 {
-                    case "Simples":				//TODO: alterar preco
-                        preco += 3.50f;
+                    case "Simples":
+                        preco += 3.60f;
                         break;
-                    case "Completo":			//TODO: alterar preco
-                        preco += 4.20f;
+                    case "Completo":
+                        preco += 4.30f;
                         break;
-                    case "à Manekas (Duplo)":	//TODO: alterar preco
-                        preco += 4.90f;
+                    case "à Tasquinha (Duplo)":
+                        preco += 5.00f;
                         break;
                 }
 
@@ -128,8 +128,8 @@ namespace PedidosRulote
 
                 switch (panelHamburguer.Controls.OfType<RadioButton>().SingleOrDefault(RadioButton => RadioButton.Checked).Text)
                 {
-                    case "Simples":			//TODO: alterar preco
-                        preco += 4.00f;
+                    case "Simples":
+                        preco += 4.20f;
                         break;
                     case "Completo":
                         preco += 4.70f;
@@ -137,8 +137,8 @@ namespace PedidosRulote
                     case "Bolo do caco":
                         preco += 4.30f;
                         break;
-                    case "à David's":		//TODO: alterar preco
-                        preco += 5.00f;
+                    case "à David's":
+                        preco += 5.10f;
                         break;
                 }
 
